@@ -1,0 +1,32 @@
+article{
+    margin: 10px;
+    column-count: 3;
+    column-column-gap:35px;
+    column-rule:2px solid activeborder;
+    
+   
+}
+#sec a{
+    
+    color: activeborder;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+#i1{
+    background-image: url("thumbnails/j1.jpg");
+    width: 500px;
+    height: 400px;
+}
+#i1:hover{
+   background-image: url("thumbnails/j2.jpg");
+}
+#i2{
+    background-image: url("thumbnails/j2.jpg");
+    width: 500px;
+    height: 400px;
+}
+#i2:hover{
+   background-image: url("thumbnails/3.jpeg");
+}
