@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        
+          <script>
+              
+              function demo(){
+            var width = $(window).width();
+            var height = $(window).height();
+
+            function goRight() {
+                $("#animate").animate({
+                    left: width
+                }, 5000, function () {
+                    setTimeout(goDown, 50);
+                });
+            }
+            function goLeft() {
+                $("#animate").animate({
+                    left: 0
+                }, 5000, function () {
+                    setTimeout(goUp, 50);
+                });
+            }
+            function goUp() {
+                $("#animate").animate({
+                    top: 0
+                }, 5000, function () {
+                    setTimeout(goDown, 50);
+                });
+            }
+            function goDown() {
+                $("#animate").animate({
+                    top: height
+                }, 5000, function () {
+                    setTimeout(goLeft, 50);
+                });
+            }
+            setTimeout(goRight, 50);
+            }
+        </script>
+    </head>
+    <body onload="demo()">
+        <img id="animate" src="images/1.jpeg">
+
+      
+    </body>
+</html>
