@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+         <script>
+            var step =10;
+            function topMovement(){
+                
+            var imgTop= document.getElementById('img1').offsetTop;
+            imgTop = imgTop + step;
+            document.getElementById('img1').style.top= imgTop + "px";}
+        
+        function leftMovement(){
+            var imgTop= document.getElementById('img1').offsetLeft;
+            imgTop = imgTop + step;
+             document.getElementById('img1').style.left=imgTop + "px";}
+        
+        function rightMovement(){
+            var imgTop= document.getElementById('img1').offsetLeft;
+            imgTop = imgTop - step;
+             document.getElementById('img1').style.left=imgTop + "px";}
+        
+        function bottomMovement(){
+             var imgTop= document.getElementById('img1').offsetTop;
+            imgTop = imgTop - step;
+            document.getElementById('img1').style.top= imgTop + "px";}
+        </script>
+    </head>
+    <body>
+        <img id="img1" src="images/1.jpeg">
+        <p id="btn">
+            <input type="button" value="DOWN" onclick="topMovement()">
+            <input type="button" value="RIGHT" onclick="leftMovement()">
+            <input type="button" value="LEFT" onclick="rightMovement()">
+            <input type="button" value="TOP" onclick="bottomMovement()">
+        </p>
+        
+        
+       
+    </body>
+</html>

@@ -1,0 +1,12 @@
+img{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#btn{
+    margin-top: 500px;
+}
+
