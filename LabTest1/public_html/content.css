@@ -1,0 +1,15 @@
+#aside1{
+    float: left;
+    width: 300px;
+    height: 340px;
+    
+    padding: 20px;
+    margin-top: 20px;
+}
+#aside1 img{
+   vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+}
