@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="square" class="square"></div>
+        <script>
+          $(document).ready(function(){
+                var height = $(document).height();
+                var width = $(document).width();
+                var $div = $('#square');
+                var divwidth = $div.width();
+                var divHeight = $div.height();
+                var maxWidth = height - divwidth;
+                var maxHeight = width - divHeight  ;
+                
+                $div.css({
+                    left: Math.floor(Math.random() * maxWidth),
+                    top: Math.floor(Math.random() * maxHeight),
+                    width: Math.floor(Math.random()* 51) + 50,
+                    height: Math.floor(Math.random()* 51) + 50,
+                    
+                });
+            });
+            function getRandomArbitrary(min, max) {
+       return Math.random() * (max - min) + min;
+}
+        </script>
+    </body>
+</html>
