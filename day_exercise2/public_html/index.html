@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="square" class="square"></div>
+        <script>
+            
+            var i = 0;
+             var w = 50;
+              var h = 50;
+              var w1= 400;
+              var h1 = 400;
+            
+             function changeColor() {
+                var doc = document.getElementById("square");
+                var color = ["black", "blue", "brown", "green","purple","red","magenta"];
+                doc.style.backgroundColor = color[i];
+                i = (i + 1) % color.length;
+            }
+          
+            function changeSize(){
+               
+               if(w<400 && h<400){
+                   w=w+10;
+                   h=h+10;
+                   document.getElementById("square").style.width = w+'px';
+                   document.getElementById("square").style.height = h+'px';
+                  
+               }
+           }
+            
+           
+        
+               
+            
+            setInterval(changeColor, 1000);
+            
+            setInterval(changeSize ,100);
+           
+           
+            
+        </script>
+    </body>
+</html>
+
