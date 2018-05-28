@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="counter">10</div>
+        <script>
+            var up = true;
+            var value = 10;
+            var decrement = 1;
+            var last = 1;
+
+            function counterCalc() {
+
+                if ( value > last)
+                {
+                    value -= decrement;
+                } else {
+                   
+
+                    value = "TakeOff";
+
+                }
+                document.getElementById('counter').innerHTML = value;
+            }
+
+            var doc = document.getElementById('counter');
+            var inter= 0;
+            // generate random color
+            function colorname() {
+                return '#' + Math.floor(Math.random() * 0xFFFFFF << 0).toString(16);
+            }
+            
+            
+            window.onload = function () {
+                var everyOneSecond = function () {
+                    
+                    document.body.style.backgroundColor = colorname();
+                    doc.style.color = colorname();
+                    
+                };
+             
+                setInterval(everyOneSecond, 1000);
+               inter= setInterval(everyOneSecond, 1000);
+               
+                
+                 
+            };
+           
+            setInterval(counterCalc, 1000);
+          
+        </script>
+    </body>
+</html>
